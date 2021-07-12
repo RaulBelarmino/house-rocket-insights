@@ -10,11 +10,12 @@ from xlsxwriter         import Workbook
 from io                 import BytesIO
 from PIL                import Image
 from streamlit_folium   import folium_static
+from collections import Counter
 
 (pd.set_option('display.float_format', lambda x: '%.3f' % x))
 st.set_page_config(layout='wide')
 
-image=Image.open(r'C:\Users\Raul Belarmino\DataScience\HR.png')
+image=Image.open('HR.png')
 st.sidebar.image(image,use_column_width=True,caption='House Rocket Company')
 
 menu = st.sidebar.radio('Selecione uma das opções de página do Projeto:',
@@ -382,6 +383,20 @@ def solution(data):
     get_df = report.copy()
     st.markdown(get_table_download_link(get_df), unsafe_allow_html=True)
 
+    season = data[(data['best_season'] != 'no_season') & (data['status'] == 'buy')].copy()
+    season = season['best_season'].tolist()
+    season = ','.join(season)
+    season = season.split(',')
+    season_count = Counter(season)
+    season_count = pd.DataFrame(([season_count]))
+    season_count = season_count.melt().sort_values('value', ascending=False)
+    st.header('Qual o melhor momento para venda?')
+    st.write('Referente a tabela anterior, o gráfico representa recorrência das estações como melhor período para venda.')
+
+    fig = px.bar(season_count, x='variable', y='value', color='variable')
+    fig.update_layout(height=200, margin={'l': 0, 'b': 0, 'r': 0, 't': 0})
+    st.plotly_chart(fig, use_container_width=True)
+
     st.write('Também foi realizado um filtro para sugerir a compra dos Top 20 imóveis, por lucratividade, '
              'por baixo investimento e um Bônus de imóveis para reforma com maior ganho.')
 
@@ -504,8 +519,8 @@ def get_table_download_link(get_df):
     return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="best-houses.xlsx">Download do arquivo em excel</a>'
 
 if __name__ == '__main__':
-    path = r'C:\Users\Raul Belarmino\DataScience\Datasets\kc_house_data.csv'
-    path_1 = r'C:\Users\Raul Belarmino\DataScience\Datasets\kc_houses_solution.csv'
+    path = 'kc_house_data.csv'
+    path_1 = 'kc_houses_solution.csv'
     data = get_data(path)
     data = transform_data(data)
 
