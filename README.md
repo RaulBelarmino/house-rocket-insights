@@ -47,12 +47,11 @@ Abaixo segue a definição para cada um dos 21 atributos:
 
 ## 3.	Premissas de Negócio
 
-Após algumas pesquisas sobre fatores que tornam o imóvel mais atrativo e adequação aos atributos dos dados, algumas premissas foram consideras para este projeto:
+Após pesquisas sobre fatores que tornam o imóvel mais atrativo, algumas premissas foram consideras para este projeto:
 
-•	Fatores externos que tornam o imóvel mais atrativo são as condições do imóvel, qualidade de acabamento, localização, segurança e metragem;
+**Atributos considerados para encontrar os melhores imóveis:**
 
-•	Características como vista, número de cômodos e banheiros, possibilidade de customização, necessidade de reforma, altura do imóvel.
-
+•	Localização, metragem, número de comodos, idade e condições do imóvel, e vista.
 
 **Em relação ao dataset:**
 
@@ -139,11 +138,11 @@ Também foi realizado um filtro para sugerir a compra dos Top 20 imóveis, por l
 
 ### **Observações**
 
-Referente ao **filtro 1**, onde foi dada a importância para margem de lucro, a concentração dos imóveis ficou em apenas uma região, podendo ser um risco de diversificação de portifólio para empresa.
+Referente ao **filtro 1**, onde o objetivo é a margem de lucro, a concentração dos imóveis ficou em apenas uma região, podendo ser um risco de diversificação de portifólio para empresa.
 
-Já o **filtro 2**, a margem de lucro é igual ao filtro 1, porém o montante é menor, porém a relação de risco de diversificação é menos presente, e o investimento é baixo
+Já o **filtro 2**, a margem de lucro é igual ao filtro 1, de 30%, porém o montante para investimento é menor e a relação de risco de diversificação é menos presente.
 
-O **filtro bônus**, a margem de lucro é de 19%, menor que os outros que a margem é 30%. Porém, dependendo do tipo de reforma, o imóvel pode valorizar, tendo a possibilidade de acrescentar uma margem de lucro melhor, mas o tempo para vend, pode ser maior, devido ao periodo de reforma.
+O **filtro bônus**, a margem de lucro é de 19%, menor que os outros. Contudo, a reforma pode valorizar, tendo a possibilidade de acrescentar uma margem de lucro melhor, mas o tempo para venda, pode ser maior.
 
 ## 7. Considerações Finais
 O objetivo foi alcançado, pois após a criação features que são reponsáveis por apresentar os melhores imóveis para revenda. Features como a mediana do preço do imóvel por zipcode, e a mediana do preço da região + season, e filtrando os imóveis que estão em boas condições. Foram encontradas 5222 imóveis com potencial para venda.
@@ -152,4 +151,4 @@ Com os imóveis aptos para compra selecionados, e com as medianas de preço das 
 Neste sentido, resultando em uma tabela com os melhores imóveis para compra e o melhor momento para venda.
 
 ## 8. Próximos passos
-Realizar uma coleta de dados mais robusta, para obter dados como o bairro de cara imóvel e realizar o agrupamento por bairro de descobrir o valor mediano da localidade, para realizar a filtragem dos melhores imóveis pelo preço mediano do bairro. Por fim, realizar a previsão da valorização do imóvel, afim de reter a venda, até o imóvel estar mais valorizado no mercado.
+Diminuir o risco de diversificação do portifólio, através de uma classificação dos imóveis por atributos como: metragem, número de comodos, vista e público alvo. Identificar os melhores bairros para se morar e mais atrativos, através de pesquisas na web. Por fim, realizar a previsão da valorização do imóvel, afim de reter a venda, até o imóvel estar mais valorizado no mercado.
