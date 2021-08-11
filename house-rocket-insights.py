@@ -17,7 +17,7 @@ from folium.plugins     import MarkerCluster
 (pd.set_option('display.float_format', lambda x: '%.3f' % x))
 st.set_page_config(layout='wide')
 
-image=Image.open('HR.png')
+image=Image.open('images\HR.png')
 st.sidebar.image(image,use_column_width=True,caption='House Rocket Company')
 
 menu = st.sidebar.radio('Selecione uma das opções de página do Projeto:',
