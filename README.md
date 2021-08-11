@@ -13,7 +13,7 @@ Os atributos das casas, às tornam mais atrativas, ou seja, a estratégia é enc
 
 **2)**	Uma vez a casa em posse da empresa, qual o melhor momento para vendê-las e qual seria o preço da venda?
 
-**Deploy do projeto na plataforma Heroku:**
+**Deploy do projeto na plataforma do Streamlit:**
 
 [<img alt="Streamlit App" src="https://camo.githubusercontent.com/767be70c92254555bd347ab07908fec67854c2264b77702581bd230fd7eac54f/68747470733a2f2f7374617469632e73747265616d6c69742e696f2f6261646765732f73747265616d6c69745f62616467655f626c61636b5f77686974652e737667"/>](https://share.streamlit.io/raulbelarmino/house-rocket-insights/main/house-rocket-insights.py)
 
