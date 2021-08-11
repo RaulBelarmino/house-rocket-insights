@@ -79,19 +79,19 @@ Etapas para entendimento e solução do problema de negócio:
 
 4)	Tratamento de dados
 
-  a.	Tranformação de variáveis
+      a.	Tranformação de variáveis
 
-  b.	Limpeza
+      b.	Limpeza
 
-  c.	Entendimento dos dados processados
+      c.	Entendimento dos dados processados
 
 5)	Exploração de dados
 
-  a. Aplicação de estatística descritiva
+      a. Aplicação de estatística descritiva
 
-  b. Metricas de negócio
+      b. Metricas de negócio
 
-  c. Análise e entendimento dos dados
+      c. Análise e entendimento dos dados
 
 6)	Responder problemas do negócio
 
