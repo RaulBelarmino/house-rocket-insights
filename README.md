@@ -78,13 +78,19 @@ Etapas para entendimento e solução do problema de negócio:
 3)	Entendimento de negócio
 
 4)	Tratamento de dados
+
 a.	Tranformação de variáveis
+
 b.	Limpeza
+
 c.	Entendimento dos dados processados
 
 5)	Exploração de dados
+
 a. Aplicação de estatística descritiva
+
 b. Metricas de negócio
+
 c. Análise e entendimento dos dados
 
 6)	Responder problemas do negócio
@@ -103,9 +109,9 @@ c. Análise e entendimento dos dados
 
 **Falso**, há diferença é de aproximadamente 60% em média.
 
-**H10:** Quanto maior o atributo grade do imóvel, a média de preço cresce 20%;
+**H9:** Imóveis de 3 quartos e 2 banheiros devem ser 10% mais caros que imóveis de 3 quartos e 1 banheiro
 
-**Verdadeiro**, há média de chega a 35%, quanto maior o grade (design) do imóvel.
+**Falso**, os imóveis com 3 quartos e 2 banheiro são mais caros, porém aproximadamente 29%.
 
 ## 6. Tradução dos resultados para o Negócio
 
@@ -113,24 +119,24 @@ O que as análises das hipóteses dizem sobre o negócio:
 
 | Hipótese                                                     | Resultado  | Tradução para negócio                                        |
 | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ |
-|H1: Imóveis que possuem vista para água, são 30% mais caros, na média.|	Verdadeiro|	Investir em imóveis com vista para água.|
-|H2: Imóveis com data de construção menor que 1955 são 50% mais baratos, na média.|	Falsa|	Investir em imóveis independente da data de construção.|
-|H3: Imóveis sem porão (sqft_lot), são 40% maiores que os imóveis com porão.|	Falsa|	Investir em imóveis independente da existência ou não de porão.|
-|H4: A mediana de preço de imóveis com 2 andares ou mais, com vista para água é 20% mais alta, que imóveis com 1 andar e com vista para água.|	Verdadeiro|	Investir em imóveis com dois andares ou mais, caso tenha vista para água.|
-H5: Imóveis renovados são 20% mais caros.|	Verdadeira|	Investir em imóveis reformados.|
-|H6: Imóveis em más condições são 30% mais baratos que imóveis com boas condições.|	Verdadeira|	Não investir em imóveis em más condições.|
-|H7: Imóveis com más condições e grade baixo são 50% mais baratos que imóveis com boas condições e grade alto.|	Verdadeira|	Investir em imóveis com boas condições e grade alto.|
-|H8: Há um aumento do preço em 10% a cada banheiro adicional.|	Verdadeira|	Há uma valorização de imóveis, quanto mais banheiros, demonstrando-se um bom negócio.|
-|H9: Imóveis com 3 banheiros tem um crescimento de MoM (Mounth over Mounth) de 15%.| Falsa|	Investir em meses onde o preço do imóvel é menor.|
-|H10: Quanto maior o atributo grade do imóvel, a média de preço cresce 20%.|	Verdadeira|	Investir em imóveis com grade alto.|
+|H1: Imóveis que possuem vista para água deveriam ser mais caros na média.|	Verdadeiro|	Investir em imóveis com vista para água.|
+|H2: Imóveis com vista para água deveriam ser 50% mais caros, na média, que imóveis próximos ao lago sem vista.|	Falso|	Investir em imóveis proximos ao lago, idenpendente da vista.|
+|H3: Imóveis com data de construção menor que 1955 sem renovação deveriam ser mais baratos, na média.|	Verdadeiro|	Investir em imóveis sem reforma pode ser uma oportunidade para maior lucratividade.|
+|H4: A mediana de preço de imóveis com 2 andares ou mais, com vista para água deveria ser mais alta, que imóveis com 1 andar e com vista para água.|	Verdadeiro|	Investir em imóveis com dois andares ou mais, caso tenha vista para água.|
+|H5: Imóveis renovados são 20% mais caros.|	Falso|	Investir em imóveis reformados, caso a média de preço seja abaixo da mediana da região.|
+|H6: Imóveis em más condições devem ser mais baratos que imóveis com boas condições.|	Verdadeiro|	Não investir em imóveis em más condições, caso a mediana de preço seja maior que a mediana da região.|
+|H7: Há um aumento do preço em média de 10% a cada banheiro adicional.|	Falso|	Há uma valorização de imóveis, quanto mais banheiros, demonstrando-se um bom negócio.|
+|H8: Quanto maior o atributo grade do imóvel, a média de preço deve ser maior.|	Verdadeiro|	Não investir em imóveis com grade baixo.|
+|H9: Imóveis de 3 quartos e 2 banheiros devem ser 10% mais caros que imóveis de 3 quartos e 1 banheiro.| Falso|	Os imóveis com 3 quartos e 2 banheiro são mais caros, porém aproximadamente 29%.|
+|H10: Imóveis com porão deveriam ser mais caros que imóveis sem porão.|	Verdadeiro|	Imóveis com porão são mais valorizados, oportunidade caso o valor seja menor que a mediana da região.|
 
 Também foi realizado um filtro para sugerir a compra dos Top 20 imóveis, por lucratividade, por baixo investimento e um Bônus de imóveis para reforma com maior lucro.
 
 | Filtro | Investimento  | Lucro | Margem |
 | ------ | ------------- | ----- | ------ |
-| Lucratividade| $26.254.300| $7.876.290| 30%|
-| Baixo Investimento| $1.882.950| $564.885| 30%|
-| Imóveis para reforma| $9.895.400 + $850.301 | $2.118.319| 19%|
+| Lucratividade| $26.404.300| $7.921.290| 30%|
+| Baixo Investimento| $1.950.450| $585.135| 30%|
+| Imóveis para reforma| $9.997.450 + $851.406 | $2.147.829| 19%|
 
 **O valor da reforma dos imóveis para reforma, foi calculado da seguinte forma:**
 
@@ -145,10 +151,11 @@ Já o **filtro 2**, a margem de lucro é igual ao filtro 1, de 30%, porém o mon
 O **filtro bônus**, a margem de lucro é de 19%, menor que os outros. Contudo, a reforma pode valorizar, tendo a possibilidade de acrescentar uma margem de lucro melhor, mas o tempo para venda, pode ser maior.
 
 ## 7. Considerações Finais
-O objetivo foi alcançado, pois após a criação features que são reponsáveis por apresentar os melhores imóveis para revenda. Features como a mediana do preço do imóvel por zipcode, e a mediana do preço da região + season, e filtrando os imóveis que estão em boas condições. Foram encontradas 5222 imóveis com potencial para venda.
-Com os imóveis aptos para compra selecionados, e com as medianas de preço das estações do ano por região descobertas, foi calculado o valor de venda. Caso o preço do imóvel for menor que a mediana da season + região, acrescimo de 30% no valor da compra, caso contrário o acrescimo é de 10%.
+O objetivo foi alcançado, pois após a criação de features como a mediana do preço do imóvel por zipcode, e a mediana do preço da região + season, e filtrando os imóveis que estão em boas condições. Foram encontradas 5172 imóveis com potencial para venda.
+Com os imóveis aptos para compra, e com as medianas de preço das estações do ano por região descobertas, foi calculado o valor de venda. Caso o preço do imóvel for menor que a mediana da season + região, acrescimo de 30% no valor da compra, caso contrário o acrescimo é de 10%.
 
 Neste sentido, resultando em uma tabela com os melhores imóveis para compra e o melhor momento para venda.
 
 ## 8. Próximos passos
-Diminuir o risco de diversificação do portifólio, através de uma classificação dos imóveis por atributos como: metragem, número de comodos, vista e público alvo. Identificar os melhores bairros para se morar e mais atrativos, através de pesquisas na web. Por fim, realizar a previsão da valorização do imóvel, afim de reter a venda, até o imóvel estar mais valorizado no mercado.
+Realizar uma classificação dos imóveis por atributos como: zipcode, metragems, número de comodos, vista e proximidade de entreterimento, exemplo: lagos.
+Por fim, realizar a previsão da valorização do imóvel, afim de reter a venda, até o imóvel estar mais valorizado no mercado.
