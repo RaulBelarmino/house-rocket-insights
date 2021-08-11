@@ -134,9 +134,9 @@ Também foi realizado um filtro para sugerir a compra dos Top 20 imóveis, por l
 
 | Filtro | Investimento  | Lucro | Margem |
 | ------ | ------------- | ----- | ------ |
-| Lucratividade| $26.404.300| $7.921.290| 30%|
-| Baixo Investimento| $1.950.450| $585.135| 30%|
-| Imóveis para reforma| $9.997.450 + $851.406 | $2.147.829| 19%|
+| 1- Lucratividade| $26.404.300| $7.921.290| 30%|
+| 2- Baixo Investimento| $1.950.450| $585.135| 30%|
+| 3- Imóveis para reforma| $9.997.450 + $851.406 | $2.147.829| 19%|
 
 **O valor da reforma dos imóveis para reforma, foi calculado da seguinte forma:**
 
