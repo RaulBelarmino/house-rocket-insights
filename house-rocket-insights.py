@@ -30,12 +30,12 @@ def get_data(path):
     return data
 
 def get_data_clean():
-    data = pd.read_csv('data_clean.csv')
+    data = pd.read_csv('datasets/data_clean.csv')
 
     return data
 
 def get_data_solution():
-    data = pd.read_csv('kc_houses_solution.csv')
+    data = pd.read_csv('datasets/kc_houses_solution.csv')
 
     return data
 
