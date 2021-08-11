@@ -15,7 +15,7 @@ Os atributos das casas, às tornam mais atrativas, ou seja, a estratégia é enc
 
 **Deploy do projeto na plataforma Heroku:**
 
-[<img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"/>](https://house-rocket-rbelarmino.herokuapp.com)
+[<img alt="Streamlit App" src="https://camo.githubusercontent.com/767be70c92254555bd347ab07908fec67854c2264b77702581bd230fd7eac54f/68747470733a2f2f7374617469632e73747265616d6c69742e696f2f6261646765732f73747265616d6c69745f62616467655f626c61636b5f77686974652e737667"/>](https://share.streamlit.io/raulbelarmino/house-rocket-insights/main/house-rocket-insights.py)
 
 ## 2. Atributos dos dados
 Os dados para este projeto podem ser encontrados no [Kaggle](https://www.kaggle.com/harlfoxem/housesalesprediction/discussion/207885) 
