@@ -48,7 +48,7 @@ def data_overview(data):
 
     # Overview map
 
-    df1 = data.copy().sample(4000)
+    df1 = data.copy()
 
     # Base map
     density_map = folium.Map(location=[df1['lat'].mean(), df1['long'].mean()],
