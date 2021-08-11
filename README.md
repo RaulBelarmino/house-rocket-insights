@@ -148,7 +148,7 @@ Referente ao **filtro 1**, onde o objetivo é a margem de lucro, a concentraçã
 
 Já o **filtro 2**, a margem de lucro é igual ao filtro 1, de 30%, porém o montante para investimento é menor e a relação de risco de diversificação é menos presente.
 
-O **filtro bônus**, a margem de lucro é de 19%, menor que os outros. Contudo, a reforma pode valorizar, tendo a possibilidade de acrescentar uma margem de lucro melhor, mas o tempo para venda, pode ser maior.
+O **filtro 3 - bônus**, a margem de lucro é de 19%, menor que os outros. Contudo, a reforma pode valorizar, tendo a possibilidade de acrescentar uma margem de lucro melhor, mas o tempo para venda, pode ser maior.
 
 ## 7. Considerações Finais
 O objetivo foi alcançado, pois após a criação de features como a mediana do preço do imóvel por zipcode, e a mediana do preço da região + season, e filtrando os imóveis que estão em boas condições. Foram encontradas 5172 imóveis com potencial para venda.
